@@ -1,0 +1,13 @@
+﻿@model IEnumerable<TestWebApp.Domain.Entity.Service>
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+@foreach(var service in Model)
+{
+    <p>@service.ServiceId </p>
+    <p>@service.ServiceName </p>
+    <p>@service.ServiceDescription </p>
+}

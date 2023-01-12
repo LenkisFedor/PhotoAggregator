@@ -1,0 +1,116 @@
+﻿@model TestWebApp.Domain.ViewModels.Photographer.PhotographerViewModel
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<div style="padding: 10px;"></div>
+<div class="card mb-3">
+    <div class="row g-0">
+        <div class="col-md-4">
+            @if (Model.PhotographerId == 1)
+            {
+                <img src="~/images/Vrnkrl.jpg"
+                 class="img-fluid rounded-start rounded" alt="@Model?.PhotographerName">
+                <h5 class="card-title text-center">@Model?.PhotographerName</h5>
+                <p class="card-text"><b>Электронная почта: </b>@Model?.PhotographerEmail</p>
+                <p class="card-text"><b>Опыт:</b> @Model?.PhotographerWorkExperience Лет</p>
+            }
+            else if(Model.PhotographerId == 2)
+            {
+                <img src="~/images/Nastya.jpg"
+                 class="img-fluid rounded-start rounded" alt="@Model?.PhotographerName">
+                  <h5 class="card-title text-center">@Model?.PhotographerName</h5>
+                <p class="card-text"><b>Электронная почта: </b>@Model?.PhotographerEmail</p>
+                <p class="card-text"><b>Опыт:</b> @Model?.PhotographerWorkExperience Лет</p>
+            }
+            else if (Model.PhotographerId == 3)
+            {
+                <img src="~/images/Pavel.png"
+                 class="img-fluid rounded-start rounded" alt="@Model?.PhotographerName">
+                <h5 class="card-title text-center">@Model?.PhotographerName</h5>
+                <p class="card-text"><b>Электронная почта: </b>@Model?.PhotographerEmail</p>
+                <p class="card-text"><b>Опыт:</b> @Model?.PhotographerWorkExperience Лет</p>
+            }
+        </div>
+@*        <div class="col-md-4">
+            <div class="card-body">
+                <h5 class="card-title text-center">@Model?.PhotographerName</h5>
+                <p class="card-text"><b>Электронная почта: </b>@Model?.PhotographerEmail</p>
+                <p class="card-text"><b>Опыт:</b> @Model?.PhotographerWorkExperience Лет</p>
+            </div>
+        </div>*@
+        <div class="col-md-4">
+            <div class="card-body">
+                @if (Model.PhotographerId == 1)
+                {
+                    <div class="row row-cols-1 text-right">
+                        <div class="row" style="padding: 5px;">
+                            <div class="card">
+                                <img src="~/images/Vrnkrl_photo1.jpg" class="card-img-top">
+                            </div>
+                        </div>
+                        <div class="col" style="padding: 5px;">
+                            <div class="card">
+                                <img src="~/images/Vrnkrl_photo2.jpg" class="card-img-top">
+                            </div>
+                        </div>
+                    </div>
+
+                }
+                @if (Model.PhotographerId == 2)
+                {
+                    <div class="row row-cols-1 text-right">
+                        <div class="row" style="padding: 5px;">
+                            <div class="card">
+                                <img src="~/images/Nastya_photo1.jpg" class="card-img-top">
+                            </div>
+                        </div>
+                        <div class="col" style="padding: 5px;">
+                            <div class="card">
+                                <img src="~/images/Nastya_photo2.jpg" class="card-img-top">
+                            </div>
+                        </div>
+                        <div class="col" style="padding: 5px;">
+                            <div class="card">
+                                <img src="~/images/Nastya_photo3.jpg" class="card-img-top">
+                            </div>
+                        </div>
+                    </div>
+                }
+                @if (Model.PhotographerId == 3)
+                {
+                    <div class="row row-cols-1 text-right">
+                        <div class="row" style="padding: 5px;">
+                            <div class="card">
+                                <img src="~/images/Pavel_photo1.jpg" class="card-img-top">
+                            </div>
+                        </div>
+                        <div class="col" style="padding: 5px;">
+                            <div class="card">
+                                <img src="~/images/Pavel_photo2.jpg" class="card-img-top">
+                            </div>
+                        </div>
+                        <div class="col" style="padding: 5px;">
+                            <div class="card">
+                                <img src="~/images/Pavel_photo3.jpg" class="card-img-top">
+                            </div>
+                        </div>
+                    </div>
+                    @*<div class="col" style="padding: 10px;">
+                        <div class="card">
+                            
+                        </div>
+                    </div>
+                    <div class="col" style="padding: 10px;">
+                        <div class="card">
+                            
+                        </div>
+                    </div>*@
+                }
+
+            </div>
+        </div>
+    </div>
+</div>
